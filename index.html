@@ -1,0 +1,100 @@
+<style>
+  :root {
+    --bg: rgba(0, 0, 0, 0.1);
+    --hsline: black;
+    --hscolor: #a36e39;
+    --door: red;
+    --door-handle: black;
+    --window: yellow;
+    --roof: red;
+  }
+
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .frame {
+    background-color: var(--bg);
+    width: 400px;
+    height: 400px;
+    position: absolute;
+  }
+
+  .bottom-house {
+    background-color: black;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: calc(100vw-150px);
+    background-image: linear-gradient(var(--hsline) 5%, var(--hscolor) 5%);
+    background-size: 20px 15px;
+    left: 30%;
+    top: 62.5%;
+  }
+
+  .door {
+    background-color: var(--door);
+    width: 50px;
+    height: 125px;
+    position: absolute;
+    top: 17%;
+    left: 10%;
+  }
+
+  .door-handle {
+    background-color: var(--door-handle);
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+    top: 50%;
+    left: 90%;
+    margin-top: 60px;
+    margin-left: 35px;
+  }
+
+  .window {
+    background-color: var(--window);
+    width: 60px;
+    height: 45px;
+    position: absolute;
+    top: 30%;
+    left: 52%;
+  }
+
+/*   .roof {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 100px solid var(--roof);
+    position: absolute;
+    top: 37.5%;
+    left: 23%
+  }  */
+
+  .roof {
+    width: 200px;
+    height: 150px;
+    background-color: black;
+    clip-path: polygon(18% 0, 81% 0, 100% 100%, 0% 100%);
+    top: 37.5%;
+    left: 23%;
+  }
+  
+</style>
+
+<html lang="en-US">
+  <div class="frame">
+    <div class="bottom-house">
+      <div class="door">
+        <div class="door-handle"></div>
+      </div>
+      <div class="window"></div>
+    </div>
+    <div class="roof"></div>
+  </div>
+</html>
